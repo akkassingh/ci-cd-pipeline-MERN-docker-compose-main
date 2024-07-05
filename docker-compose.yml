@@ -17,7 +17,7 @@ services:
       - net
 
   backend:
-    image: bjnandi/ci-cd-mern-dc-backend:v1.0.${IMAGE_TAG}
+    image: akkassingh/ci-cd-mern-dc-backend:v1.0.${IMAGE_TAG}
     # container_name: backend
 
     env_file: ./.env
@@ -34,7 +34,7 @@ services:
       - net
 
   frontend:
-    image: bjnandi/ci-cd-mern-dc-frontend:v1.0.${IMAGE_TAG}
+    image: akkassingh/ci-cd-mern-dc-frontend:v1.0.${IMAGE_TAG}
     # container_name: frontend
 
     depends_on:
