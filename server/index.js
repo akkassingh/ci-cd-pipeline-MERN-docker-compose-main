@@ -7,14 +7,10 @@ const cors = require("cors");
 dotenv.config();
 
 const {
-  DB_USER,
-  DB_PASSWORD,
-  DB_HOST,
-  DB_PORT,
-  DB_NAME,
+  MONGODB_URL
 } = process.env;
 
-const MONGO_URI = `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?authSource=admin`
+const MONGO_URI = `${MONGODB_URL}`
 
 // Connect DB
 mongoose
