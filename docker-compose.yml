@@ -34,6 +34,11 @@ services:
       - DB_PORT=$MONGODB_DOCKER_PORT
     depends_on:
       - mongodb
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: nginx-logs
+        awslogs-stream: nginx-log-stream  
     restart: always
     networks:
       - net
@@ -44,6 +49,11 @@ services:
 
     depends_on:
       - backend
+    logging:
+      driver: awslogs
+      options:
+        awslogs-group: nginx-logs
+        awslogs-stream: nginx-log-stream
     restart: always
     networks:
       - net
