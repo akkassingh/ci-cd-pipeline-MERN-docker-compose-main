@@ -1,6 +1,6 @@
 
 tag:=v1.0.${TAG}
-images_name:=ci-cd-mern-dc-backend
+images_name:=ci-cd-backend
 repository:=akkassingh
 
 all: build push
